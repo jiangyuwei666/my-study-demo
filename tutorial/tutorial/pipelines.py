@@ -22,6 +22,7 @@ class TextPipeline(object):
         else:
             return DropItem('Missing Text')
 
+
 class MongoPipeline:
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri

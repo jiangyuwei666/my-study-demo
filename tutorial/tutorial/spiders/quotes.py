@@ -13,6 +13,7 @@ class QuotesSpider(scrapy.Spider):
         for quote in quotes:
             item = QuotesItem()
             test1 = quote.xpath('.//span[@class="text"]/text()')
+            test4 = quote.xpath('.//span[@class="text"]')
             test2 = quote.xpath('.//span[@class="text"]/text()').extract()
             test3 = quote.xpath('.//span[@class="text"]/text()').extract_first()
             # item['text'] = quote.xpath('.//span[@class="text"]/text()').extract_first()
@@ -22,6 +23,7 @@ class QuotesSpider(scrapy.Spider):
             # yield item
             print("*******")
             print(test1)
+            print(test4)
             print(test2)
             print(test3)
 
