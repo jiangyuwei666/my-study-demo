@@ -68,6 +68,7 @@ class TutorialDownloaderMiddleware(object):
         crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
         return s
 
+    # 修改请求
     def process_request(self, request, spider):
         # Called for each request that goes through the downloader
         # middleware.
@@ -80,6 +81,7 @@ class TutorialDownloaderMiddleware(object):
         #   installed downloader middleware will be called
         return None
 
+    # 修改响应
     def process_response(self, request, response, spider):
         # Called with the response returned from the downloader.
 

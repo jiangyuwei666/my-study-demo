@@ -15,6 +15,7 @@ class TextPipeline(object):
         self.limit = 50
 
     def process_item(self, item, spider):
+        # 处理item。在spider中yield传过来的item
         if item['text']:
             if len(item['text']) > self.limit:
                 item['text'] = item['text'][0:self.limit].rstrip() + "..."
@@ -30,9 +31,11 @@ class MongoPipeline:
 
     @classmethod
     def from_crawler(cls, crawler):
+        # 返回settings的一些东西
         return cls(mongo_uri=crawler.settings.get('MONGO_URI'), mongo_db=crawler.settings.get('MONGO_DB'))
 
     def open_spider(self, spider):
+        # spider开启时调用
         self.client = pymongo.MongoClient(self.mongo_uri)
         self.db = self.client[self.mongo_db]
 
@@ -42,6 +45,7 @@ class MongoPipeline:
         return item
 
     def close_spider(self, spider):
+        # spider关闭时调用
         self.client.close()
 
 
