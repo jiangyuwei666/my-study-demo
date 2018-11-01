@@ -66,7 +66,7 @@ DOWNLOAD_DELAY = 0.5# 下载延迟
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 # 开启管道
 ITEM_PIPELINES = {
-   'douban.pipelines.DoubanPipeline': 300,
+   'douban.pipelines.MongoPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -89,7 +89,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-
+# 数据库连接设置
 MONGO_HOST = 'localhost'
 MONGO_PORT = 27017
 MONGO_DB = 'douban'

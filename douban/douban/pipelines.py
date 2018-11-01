@@ -8,7 +8,9 @@
 import pymongo
 from douban.settings import *
 
-class DoubanPipeline(object):
+
+# 数据库管道
+class MongoPipeline(object):
     def __init__(self):
         self.client = pymongo.MongoClient(host=MONGO_HOST, port=MONGO_PORT)
         self.db = self.client[MONGO_DB]
