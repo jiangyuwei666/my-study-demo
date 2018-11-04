@@ -14,6 +14,7 @@ BOT_NAME = 'ZhihuUser'
 SPIDER_MODULES = ['ZhihuUser.spiders']
 NEWSPIDER_MODULE = 'ZhihuUser.spiders'
 
+REDIRECT_ENABLED = False
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'ZhihuUser (+http://www.yourdomain.com)'
