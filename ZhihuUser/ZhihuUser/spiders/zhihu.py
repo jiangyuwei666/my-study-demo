@@ -67,9 +67,13 @@ class ZhihuSpider(scrapy.Spider):
     # 测试api接口是否可用的
     def parse_test(self, response):
         follow_result = json.loads(response.text)
+        if 'data' in follow_result.keys():
+            print("***")
+            for i in follow_result.get('data'):
+                print(i.get('name'))
         if 'paging' in follow_result.keys():
             if follow_result.get('paging').get('is_end') is False:
-                yield scrapy.Request(url=follow_result.get('paging').get('next'), callback=self.parse_follow)
+                yield scrapy.Request(url=follow_result.get('paging').get('next').replace('https://www.zhihu.com/', 'https://www.zhihu.com/api/v4/'), callback=self.parse_test)
 
 
 
