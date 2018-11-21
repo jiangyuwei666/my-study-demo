@@ -14,7 +14,7 @@ class ZhihuSpider(scrapy.Spider):
     user_info_url = 'https://www.zhihu.com/api/v4/members/{user_token}?include={include}'
     user_info_query = 'allow_message%2Cis_followed%2Cis_following%2Cis_org%2Cis_blocking%2Cemployments%2Canswer_count%2Cfollower_count%2Carticles_count%2Cgender%2Cbadge%5B%3F(type%3Dbest_answerer)%5D.topics'
     # 关注的人页面请求的接口url和参数
-    follows_url = 'https://www.zhihu.com/api/v4/members/{user_token}/followees?include={include}&limit={limit}&offset={offset}'
+    follows_url = 'https://www.zhihu.com/api/v4/members/{user_token}/followees?include={include}&offset={offset}&limit={limit}'
     follows_query = 'data%5B*%5D.answer_count%2Carticles_count%2Cgender%2Cfollower_count%2Cis_followed%2Cis_following%2Cbadge%5B%3F(type%3Dbest_answerer)%5D.topics'
     # 关注者的页面请求接口url和参数
     followers_url = 'https://www.zhihu.com/api/v4/members/{user_token}/followers?include={include}&offset={offset}&limit={limit}'
@@ -72,19 +72,6 @@ class ZhihuSpider(scrapy.Spider):
         if 'paging' in follower_result.keys():
             if follower_result.get('paging').get('is_end') is False:
                 yield scrapy.Request(url=follower_result.get('paging').get('next').replace('https://www.zhihu.com/', 'https://www.zhihu.com/api/v4/'), callback=self.parse_follower)
-
-
-    # 测试api接口是否可用的
-    # def parse_test(self, response):
-    #     follow_result = json.loads(response.text)
-    #     if 'data' in follow_result.keys():
-    #         print("***")
-    #         for i in follow_result.get('data'):
-    #             print(i.get('name'))
-    #     if 'paging' in follow_result.keys():
-    #         if follow_result.get('paging').get('is_end') is False:
-    #             yield scrapy.Request(url=follow_result.get('paging').get('next').replace('https://www.zhihu.com/', 'https://www.zhihu.com/api/v4/'), callback=self.parse_test)
-
 
 
 
