@@ -81,9 +81,9 @@ def get_loss(last, next):
     :return:
     """
     if 0 == next:
-        return abs(next) - abs(last)
+        return abs(next - last)
     else:
-        return abs((next - last)) / abs(next)
+        return abs((next - last) / next)
 
 
 def draw(generator, name):
@@ -109,7 +109,6 @@ def draw_loss(generator, name):
     last = 0
     for i in generator:
         s.append(get_loss(last=last, next=i[0]))
-        print(i, get_loss(last=last, next=i[0]))
         last = i[0]
     line.add('', list(range(len(s))), s, is_smooth=True)
     line.render(name + '.html')
