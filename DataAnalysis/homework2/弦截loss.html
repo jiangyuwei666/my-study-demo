@@ -29,15 +29,15 @@
 </script>
 </head>
 <body>
-    <div id="53c9af777fad4a09910e9cf80db4a90b" style="width:800px;height:400px;"></div>
+    <div id="11cbfdf74c744e92b799a8ca49f1a17c" style="width:800px;height:400px;"></div>
     <script type="text/javascript">
 
-var myChart_53c9af777fad4a09910e9cf80db4a90b = echarts.init(document.getElementById('53c9af777fad4a09910e9cf80db4a90b'), 'light', {renderer: 'canvas'});
+var myChart_11cbfdf74c744e92b799a8ca49f1a17c = echarts.init(document.getElementById('11cbfdf74c744e92b799a8ca49f1a17c'), 'light', {renderer: 'canvas'});
 
-var option_53c9af777fad4a09910e9cf80db4a90b = {
+var option_11cbfdf74c744e92b799a8ca49f1a17c = {
     "title": [
         {
-            "text": "\u5f26\u622a\u6cd5",
+            "text": "\u5f26\u622a\u6cd5loss",
             "left": "auto",
             "top": "auto",
             "textStyle": {
@@ -68,7 +68,7 @@ var option_53c9af777fad4a09910e9cf80db4a90b = {
             }
         }
     },
-    "series_id": 7011562,
+    "series_id": 5840689,
     "tooltip": {
         "trigger": "item",
         "triggerOn": "mousemove|click",
@@ -84,61 +84,64 @@ var option_53c9af777fad4a09910e9cf80db4a90b = {
     },
     "series": [
         {
-            "type": "scatter",
-            "symbol": "circle",
-            "symbolSize": 10,
+            "type": "line",
+            "symbol": "emptyCircle",
+            "symbolSize": 4,
+            "smooth": true,
+            "step": false,
+            "showSymbol": true,
             "data": [
                 [
-                    0.36787944117144233,
-                    -0.46853639461338437
+                    0,
+                    1.0
                 ],
                 [
-                    0.5033143321329856,
-                    -0.16742007618244814
+                    1,
+                    0.2690861005042048
                 ],
                 [
-                    0.5474120509443982,
-                    -0.053648691479005306
+                    2,
+                    0.0805567190845268
                 ],
                 [
-                    0.5611150437947322,
-                    -0.016575372928013477
+                    3,
+                    0.02442100421628848
                 ],
                 [
-                    0.5653082891037876,
-                    -0.005062903191810797
+                    4,
+                    0.0074176257271995295
                 ],
                 [
-                    0.5665853418084092,
-                    -0.0015410319414590479
+                    5,
+                    0.0022539458937387664
                 ],
                 [
-                    0.5669736991488938,
-                    -0.0004685533567156952
+                    6,
+                    0.0006849653538913164
                 ],
                 [
-                    0.5670917476619045,
-                    -0.00014241808542703183
+                    7,
+                    0.00020816475199538748
                 ],
                 [
-                    0.5671276258593796,
-                    -4.3284088025563605e-05
+                    8,
+                    6.326300437351134e-05
                 ],
                 [
-                    0.5671385297830954,
-                    -1.3154621078759199e-05
+                    9,
+                    1.9226208665461065e-05
                 ],
                 [
-                    0.5671418436079487,
-                    -3.997831130142515e-06
+                    10,
+                    5.843026556143735e-06
                 ],
                 [
-                    0.5671428507126959,
-                    -1.2149805962424765e-06
+                    11,
+                    1.7757514634754519e-06
                 ],
                 [
-                    0.567143156781617,
-                    -3.6924436164209595e-07
+                    12,
+                    5.396678377173462e-07
                 ]
             ],
             "label": {
@@ -156,13 +159,24 @@ var option_53c9af777fad4a09910e9cf80db4a90b = {
                     }
                 }
             },
+            "lineStyle": {
+                "normal": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
             "markPoint": {
                 "data": []
             },
             "markLine": {
                 "data": []
             },
-            "seriesId": 7011562
+            "seriesId": 5840689
         }
     ],
     "legend": [
@@ -194,9 +208,9 @@ var option_53c9af777fad4a09910e9cf80db4a90b = {
             },
             "inverse": false,
             "boundaryGap": true,
-            "type": "value",
+            "type": "category",
             "splitLine": {
-                "show": true
+                "show": false
             },
             "axisLine": {
                 "lineStyle": {
@@ -212,19 +226,19 @@ var option_53c9af777fad4a09910e9cf80db4a90b = {
                 }
             },
             "data": [
-                0.36787944117144233,
-                0.5033143321329856,
-                0.5474120509443982,
-                0.5611150437947322,
-                0.5653082891037876,
-                0.5665853418084092,
-                0.5669736991488938,
-                0.5670917476619045,
-                0.5671276258593796,
-                0.5671385297830954,
-                0.5671418436079487,
-                0.5671428507126959,
-                0.567143156781617
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
             ]
         }
     ],
@@ -289,7 +303,7 @@ var option_53c9af777fad4a09910e9cf80db4a90b = {
         "#f6f5ec"
     ]
 };
-myChart_53c9af777fad4a09910e9cf80db4a90b.setOption(option_53c9af777fad4a09910e9cf80db4a90b);
+myChart_11cbfdf74c744e92b799a8ca49f1a17c.setOption(option_11cbfdf74c744e92b799a8ca49f1a17c);
 
 </script>
 </body>

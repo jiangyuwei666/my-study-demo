@@ -24,7 +24,7 @@ class UserItem(scrapy.Item):
     # 回答问题数量
     answer_count = scrapy.Field()
     # 职业
-    employments = scrapy.Field()
+    # employments = scrapy.Field()
     # 性别
     gender = scrapy.Field()
     # type  一般都是people(可以与id拼成个人界面url)
@@ -34,8 +34,6 @@ class UserItem(scrapy.Item):
     # 是否接收私信
     # 因为没有加cookies登陆，所以全是false
     allow_message = scrapy.Field()
-    # 职业
-    employments = scrapy.Field()
 
 
 

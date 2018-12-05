@@ -37,5 +37,25 @@ def draw(generation):
     scatter.render('弦截法.html')
 
 
+def draw_loss(generator):
+    line = Line('弦截法loss')
+    s = []
+    last = 0
+    for i in generator:
+        s.append(get_loss(last=last, next=i[0]))
+        last = i[0]
+    line.add('', list(range(len(s))), s, is_smooth=True)
+    line.render('弦截loss.html')
+
+
+def get_loss(last, next):
+    if 0 == next:
+        return abs(next - last)
+    else:
+        return abs(next - last) / abs(next)
+
+
 if __name__ == '__main__':
     draw(get_root(0, 1))
+    draw_loss(get_root(0, 1))
+
