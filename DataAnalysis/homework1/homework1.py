@@ -114,6 +114,7 @@ def draw_loss(generator, name):
     line.render(name + '.html')
 
 
+
 if __name__ == '__main__':
     draw(bisection(-1, 4, 0.00001), "二分法")
     draw_loss(bisection(0.7, 1.4, 0.00000001), "二分法loss")
