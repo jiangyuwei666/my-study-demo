@@ -1,76 +1,49 @@
-# -*- coding:utf-8 -*-
-
-def MergeSort(input_list):
-    '''
-    函数说明:归并排序（升序）
-    Author:
-        www.cuijiahua.com
-    Parameters:
-        input_list - 待排序列表
-    Returns:
-        sorted_list - 升序排序好的列表
-    '''
-
-    def merge(input_list, left, mid, right, temp):
-        '''
-        函数说明:合并函数
-        Author:
-            www.cuijiahua.com
-        Parameters:
-            input_list - 待合并列表
-            left - 左指针
-            right - 右指针
-            temp - 临时列表
-        Returns:
-            无
-        '''
-        i = left
-        j = mid + 1
-        k = 0
-
-        while i <= mid and j <= right:
-            if input_list[i] <= input_list[j]:
-                temp[k] = input_list[i]
-                i += 1
-            else:
-                temp[k] = input_list[j]
-                j += 1
-            k += 1
-
-        while i <= mid:
-            temp[k] = input_list[i]
-            i += 1
-            k += 1
-        while j <= right:
-            temp[k] = input_list[j]
-            j += 1
-            k += 1
-
-        k = 0
-        while left <= right:
-            input_list[left] = temp[k]
-            left += 1
-            k += 1
-
-    def merge_sort(input_list, left, right, temp):
-        if left >= right:
-            return
-        mid = (right + left) // 2
-        merge_sort(input_list, left, mid, temp)
-        merge_sort(input_list, mid + 1, right, temp)
-
-        merge(input_list, left, mid, right, temp)
-
-    if len(input_list) == 0:
-        return []
-    sorted_list = input_list
-    temp = [0] * len(sorted_list)
-    merge_sort(sorted_list, 0, len(sorted_list) - 1, temp)
-    return sorted_list
+"""
+贪心算法实现活动安排问题
+"""
 
 
-if __name__ == '__main__':
-    input_list = [6, 4, 8, 9, 2, 3, 1]
-    print('排序前:', input_list)
-    sorted_list = MergeSort(input_list)
-    print('排序后:', sorted_list)
+# 用冒泡排序对结束时间进行排序，同时得到对应的开始时间的list
+def _sort(s, f):
+    for i in range(len(f)):
+        for j in range(0, len(f) - i - 1):
+            if f[j] > f[j + 1]:
+                f[j], f[j + 1] = f[j + 1], f[j]
+                s[j], s[j + 1] = s[j + 1], s[j]
+    return s, f
+
+
+def greedy(s, f, n):
+    a = [True for x in range(n)]
+    # 初始选择第一个活动
+    j = 0
+    for i in range(1, n):
+        # 如果下一个活动的开始时间大于等于上个活动的结束时间
+        if s[i] >= f[j]:
+            a[i] = True
+            j = i
+        else:
+            a[i] = False
+    return a
+
+
+if __name__ == "__main__":
+    n = int(input("请输入活动个数："))
+    arr = input("请输入每个活动的时间段（如(3, 5)）:").split()
+    s = []
+    f = []
+    for ar in arr:
+        ar = ar[1:-1]
+        start = int(ar.split(',')[0])
+        end = int(ar.split(',')[1])
+        s.append(start)
+        f.append(end)
+
+    s, f = _sort(s, f)
+    A = greedy(s, f, n)
+
+    res = []
+    for k in range(len(A)):
+        if A[k]:
+            res.append('({},{})'.format(s[k], f[k]))
+    print(' '.join(res))

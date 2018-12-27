@@ -5,54 +5,81 @@
 拆分阶段：将这n个数的集合拆开，拆成n个
 合并阶段：将这些数两两一组从大到小进行组合
 """
-from random import randint
+def MergeSort(num_list):
+    """
+    归并排序
+    :param num_list:
+    :return:
+    """
 
-
-class Solution:
-
-    def merge(self, nums, left, mid, right, temp):
+    def merge(num_list, left, mid, right, temp):
         """
-        合并
-        :param nums: 传入的数组
-        :param left: 左边指针
-        :param mid: 指针
+        合并函数
+        :param num_list:
+        :param left:
+        :param mid:
         :param right:
         :param temp:
         :return:
         """
         i = left
         j = mid + 1
+        k = 0
 
-        # 先将其按大小顺序塞进去
         while i <= mid and j <= right:
-            if nums[i] <= nums[j]:
-                temp.append(nums[i])
+            if num_list[i] <= num_list[j]:
+                temp[k] = num_list[i]
                 i += 1
             else:
-                temp.append(nums[j])
+                temp[k] = num_list[j]
                 j += 1
-        # 再将没有放进去的全部放进去
+            k += 1
+
         while i <= mid:
-            temp.append(nums[i])
+            temp[k] = num_list[i]
             i += 1
+            k += 1
         while j <= right:
-            temp.append(nums[j])
+            temp[k] = num_list[j]
+            j += 1
+            k += 1
 
-        nums.clear()
-        nums.extend(temp)
+        k = 0
+        while left <= right:
+            num_list[left] = temp[k]
+            left += 1
+            k += 1
 
-
-    def merge_sort(self, left, right, temp):
+    def merge_sort(num_list, left, right, temp):
+        """
+        排序函数
+        :param num_list:
+        :param left:
+        :param right:
+        :param temp:
+        :return:
+        """
         if left >= right:
             return
         mid = (right + left) // 2
-        self.merge_sort(left, mid, temp)
-        self.merge_sort(mid + 1, right, temp)
-        self.merge(left, mid, right, temp)
+        merge_sort(num_list, left, mid, temp)
+        merge_sort(num_list, mid + 1, right, temp)
+
+        merge(num_list, left, mid, right, temp)
+
+    if len(num_list) == 0:
+        return []
+    sorted_list = num_list
+    temp = [0] * len(sorted_list)
+    merge_sort(sorted_list, 0, len(sorted_list) - 1, temp)
+    return sorted_list
 
 
-# if __name__ == '__main__':
-#     s = Solution(10)
-#     print(s.merge_sort())
 if __name__ == '__main__':
-    
+    num_list = input("请输入多个数(用空格隔开)：")
+    nums = num_list.split(' ')
+    for i in range(len(nums)):
+        nums[i] = float(nums[i])
+    print('排序前:', nums)
+    sorted_list = MergeSort(nums)
+    print('排序后:', sorted_list)
