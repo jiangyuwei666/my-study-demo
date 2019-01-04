@@ -15,14 +15,16 @@
     <SUITE FILE_PATH="coverage/DataAnalysis$chord_cut.coverage" NAME="chord_cut Coverage Results" MODIFIED="1542959395265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework2" />
     <SUITE FILE_PATH="coverage/DataAnalysis$homework1.coverage" NAME="homework1 Coverage Results" MODIFIED="1544185801961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework1" />
     <SUITE FILE_PATH="coverage/DataAnalysis$original_gauss.coverage" NAME="original_gauss Coverage Results" MODIFIED="1545833563164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework8" />
+    <SUITE FILE_PATH="coverage/DataAnalysis$xien.coverage" NAME="xien Coverage Results" MODIFIED="1546603972194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework10" />
     <SUITE FILE_PATH="coverage/DataAnalysis$test.coverage" NAME="test Coverage Results" MODIFIED="1544694630861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework7" />
     <SUITE FILE_PATH="coverage/DataAnalysis$LU_break.coverage" NAME="LU_break Coverage Results" MODIFIED="1545881725791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework9" />
+    <SUITE FILE_PATH="coverage/DataAnalysis$euler.coverage" NAME="euler Coverage Results" MODIFIED="1546603961510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework10" />
     <SUITE FILE_PATH="coverage/DataAnalysis$newton_interpolation.coverage" NAME="newton_interpolation Coverage Results" MODIFIED="1544067659561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework5" />
     <SUITE FILE_PATH="coverage/DataAnalysis$least_squares.coverage" NAME="least_squares Coverage Results" MODIFIED="1543908376295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework4" />
     <SUITE FILE_PATH="coverage/DataAnalysis$secondary_spline.coverage" NAME="secondary_spline Coverage Results" MODIFIED="1544689928614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework7" />
     <SUITE FILE_PATH="coverage/DataAnalysis$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1545047378711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework8" />
     <SUITE FILE_PATH="coverage/DataAnalysis$fixed_point.coverage" NAME="fixed_point Coverage Results" MODIFIED="1542959410968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework2" />
-    <SUITE FILE_PATH="coverage/DataAnalysis$test__3_.coverage" NAME="test (3) Coverage Results" MODIFIED="1544065595823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework5" />
+    <SUITE FILE_PATH="coverage/DataAnalysis$test__3_.coverage" NAME="test (3) Coverage Results" MODIFIED="1546588577424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework10" />
     <SUITE FILE_PATH="coverage/DataAnalysis$belsto.coverage" NAME="belsto Coverage Results" MODIFIED="1543300155230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework3" />
     <SUITE FILE_PATH="coverage/DataAnalysis$shenmefa.coverage" NAME="shenmefa Coverage Results" MODIFIED="1542802673663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework2" />
     <SUITE FILE_PATH="coverage/DataAnalysis$test__2_.coverage" NAME="test (2) Coverage Results" MODIFIED="1545832192154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework9" />
@@ -30,21 +32,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="LU_break.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/homework9/LU_break.py">
+      <file leaf-file-name="euler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homework10/euler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="80" column="13" lean-forward="true" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="74" column="5" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+              <folding>
+                <element signature="e#260#278#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="original_gauss.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homework8/original_gauss.py">
+      <file leaf-file-name="xien.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/homework10/xien.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="33" selection-end-column="30" />
+            <state relative-caret-position="321">
+              <caret line="101" column="14" lean-forward="true" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
+              <folding>
+                <element signature="e#70#88#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lagrangian_interpolation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homework6/lagrangian_interpolation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="65" column="29" lean-forward="true" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -110,6 +126,9 @@
         <option value="$PROJECT_DIR$/homework9/test.py" />
         <option value="$PROJECT_DIR$/homework8/original_gauss.py" />
         <option value="$PROJECT_DIR$/homework9/LU_break.py" />
+        <option value="$PROJECT_DIR$/homework10/test.py" />
+        <option value="$PROJECT_DIR$/homework10/xien.py" />
+        <option value="$PROJECT_DIR$/homework10/euler.py" />
       </list>
     </option>
   </component>
@@ -140,7 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -152,17 +170,18 @@
             <path>
               <item name="DataAnalysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataAnalysis" type="462c0819:PsiDirectoryNode" />
-              <item name="homework8" type="462c0819:PsiDirectoryNode" />
+              <item name="homework6" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DataAnalysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataAnalysis" type="462c0819:PsiDirectoryNode" />
-              <item name="homework9" type="462c0819:PsiDirectoryNode" />
+              <item name="homework10" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.LU_break">
+  <component name="RunManager" selected="Python.xien">
     <configuration name="LU_break" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,6 +224,25 @@
       <module name="DataAnalysis" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework9/LU_break.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="euler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/homework10" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataAnalysis" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework10/euler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -229,77 +267,58 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/homework8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/homework10" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DataAnalysis" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework8/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework10/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="xien" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/homework9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/homework10" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DataAnalysis" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework9/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/homework7" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataAnalysis" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework7/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework10/xien.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.original_gauss" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.LU_break" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test (2)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.original_gauss" />
+      <item index="1" class="java.lang.String" itemvalue="Python.LU_break" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test (3)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.euler" />
+      <item index="4" class="java.lang.String" itemvalue="Python.xien" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.LU_break" />
-        <item index="1" class="java.lang.String" itemvalue="Python.original_gauss" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test (2)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.xien" />
+        <item index="1" class="java.lang.String" itemvalue="Python.euler" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test (3)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.LU_break" />
+        <item index="4" class="java.lang.String" itemvalue="Python.original_gauss" />
       </list>
     </recent_temporary>
   </component>
@@ -324,17 +343,17 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3299356" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="0" y="0" width="434" height="848" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="434" height="848" />
       <window_info id="Redis Servers" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3477765" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15879828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15879828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34924892" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34924892" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -379,32 +398,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="27" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/homework2/fixed_point.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2106">
-          <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework1/homework1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2886">
-          <caret line="75" column="13" lean-forward="false" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework2/newton.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2145">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="60" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homework2/chord_cut.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="897">
@@ -664,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework6/lagrangian_interpolation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2964">
-          <caret line="77" column="47" lean-forward="false" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homework8/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -682,23 +673,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework9/LU_break.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="80" column="13" lean-forward="false" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework10/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homework8/original_gauss.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="33" selection-end-column="30" />
+        <state relative-caret-position="234">
+          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework9/LU_break.py">
+    <entry file="file://$PROJECT_DIR$/homework6/lagrangian_interpolation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="80" column="13" lean-forward="true" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+        <state relative-caret-position="360">
+          <caret line="65" column="29" lean-forward="true" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework10/euler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="74" column="5" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+          <folding>
+            <element signature="e#260#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework10/xien.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="101" column="14" lean-forward="true" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
+          <folding>
+            <element signature="e#70#88#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
