@@ -59,6 +59,7 @@ def draw(xi, yi, x, y):
     plt.plot(xi, yi)
     plt.scatter(xi, yi)
     plt.scatter(x, y, color='#8B0000')
+    plt.title("newton_interpolation")
     plt.show()
 
 

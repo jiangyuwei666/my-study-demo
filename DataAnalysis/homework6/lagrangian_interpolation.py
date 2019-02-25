@@ -64,6 +64,7 @@ def draw(xi_list, yi_list, x, y):
     """
     plt.scatter(xi_list, yi_list)
     plt.scatter(x, y, color='#8B0000')
+    plt.title("lagrangian_interpolation")
     plt.show()
 
 
