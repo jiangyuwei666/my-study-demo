@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+</head>
+<body>
+    <h1>学生信息</h1>
+    <ul>
+        {%for student in students%}
+        <li>
+            <a href="{{student.id}}">{{student.sname}}</a> --
+            <!--先获取班级对象，再获取班级名属性-->
+            {{student.sclass.cname}}
+        </li>
+        {%endfor%}
+    </ul>
+</body>
+</html>
