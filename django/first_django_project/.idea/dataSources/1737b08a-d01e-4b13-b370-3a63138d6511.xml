@@ -1137,22 +1137,22 @@
     <table id="288" parent="2" name="auth_user_user_permissions">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="289" parent="2" name="django_admin_log">
+    <table id="289" parent="2" name="class">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="290" parent="2" name="django_content_type">
+    <table id="290" parent="2" name="django_admin_log">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="291" parent="2" name="django_migrations">
+    <table id="291" parent="2" name="django_content_type">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="292" parent="2" name="django_session">
+    <table id="292" parent="2" name="django_migrations">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="293" parent="2" name="myapp_class">
+    <table id="293" parent="2" name="django_session">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="294" parent="2" name="myapp_students">
+    <table id="294" parent="2" name="students">
       <Engine>InnoDB</Engine>
     </table>
     <column id="295" parent="283" name="id">
@@ -1460,199 +1460,199 @@ permission_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="350" parent="289" name="action_time">
+    <column id="350" parent="289" name="cname">
       <Position>2</Position>
-      <DataType>datetime(6)|0</DataType>
+      <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="351" parent="289" name="object_id">
+    <column id="351" parent="289" name="cdate">
       <Position>3</Position>
-      <DataType>longtext|0</DataType>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="352" parent="289" name="object_repr">
+    <column id="352" parent="289" name="cgirl_num">
       <Position>4</Position>
-      <DataType>varchar(200)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="353" parent="289" name="action_flag">
+    <column id="353" parent="289" name="cboy_num">
       <Position>5</Position>
-      <DataType>smallint(5) unsigned|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="354" parent="289" name="change_message">
+    <column id="354" parent="289" name="is_delete">
       <Position>6</Position>
-      <DataType>longtext|0</DataType>
+      <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="355" parent="289" name="content_type_id">
-      <Position>7</Position>
-      <DataType>int(11)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="356" parent="289" name="user_id">
-      <Position>8</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="357" parent="289" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
-      <ColNames>content_type_id</ColNames>
-    </index>
-    <index id="358" parent="289" name="django_admin_log_user_id_c564eba6_fk_auth_user_id">
-      <ColNames>user_id</ColNames>
-    </index>
-    <key id="359" parent="289" name="PRIMARY">
+    <key id="355" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="360" parent="289" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
-      <ColNames>content_type_id</ColNames>
-      <RefSchemaName>first_django</RefSchemaName>
-      <RefTableName>django_content_type</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="361" parent="289" name="django_admin_log_user_id_c564eba6_fk_auth_user_id">
-      <ColNames>user_id</ColNames>
-      <RefSchemaName>first_django</RefSchemaName>
-      <RefTableName>auth_user</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="362" parent="290" name="id">
+    <column id="356" parent="290" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="363" parent="290" name="app_label">
+    <column id="357" parent="290" name="action_time">
       <Position>2</Position>
-      <DataType>varchar(100)|0</DataType>
+      <DataType>datetime(6)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="364" parent="290" name="model">
+    <column id="358" parent="290" name="object_id">
       <Position>3</Position>
-      <DataType>varchar(100)|0</DataType>
+      <DataType>longtext|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="359" parent="290" name="object_repr">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="365" parent="290" name="django_content_type_app_label_model_76bd3d3b_uniq">
-      <ColNames>app_label
-model</ColNames>
-      <Unique>1</Unique>
+    <column id="360" parent="290" name="action_flag">
+      <Position>5</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="361" parent="290" name="change_message">
+      <Position>6</Position>
+      <DataType>longtext|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="362" parent="290" name="content_type_id">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="363" parent="290" name="user_id">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="364" parent="290" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
+      <ColNames>content_type_id</ColNames>
+    </index>
+    <index id="365" parent="290" name="django_admin_log_user_id_c564eba6_fk_auth_user_id">
+      <ColNames>user_id</ColNames>
     </index>
     <key id="366" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="367" parent="290" name="django_content_type_app_label_model_76bd3d3b_uniq">
-      <ColNames>app_label
-model</ColNames>
-      <UnderlyingIndexName>django_content_type_app_label_model_76bd3d3b_uniq</UnderlyingIndexName>
-    </key>
-    <column id="368" parent="291" name="id">
+    <foreign-key id="367" parent="290" name="django_admin_log_content_type_id_c4bce8eb_fk_django_co">
+      <ColNames>content_type_id</ColNames>
+      <RefSchemaName>first_django</RefSchemaName>
+      <RefTableName>django_content_type</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="368" parent="290" name="django_admin_log_user_id_c564eba6_fk_auth_user_id">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>first_django</RefSchemaName>
+      <RefTableName>auth_user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="369" parent="291" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="369" parent="291" name="app">
+    <column id="370" parent="291" name="app_label">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="371" parent="291" name="model">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="372" parent="291" name="django_content_type_app_label_model_76bd3d3b_uniq">
+      <ColNames>app_label
+model</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="373" parent="291" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="374" parent="291" name="django_content_type_app_label_model_76bd3d3b_uniq">
+      <ColNames>app_label
+model</ColNames>
+      <UnderlyingIndexName>django_content_type_app_label_model_76bd3d3b_uniq</UnderlyingIndexName>
+    </key>
+    <column id="375" parent="292" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="376" parent="292" name="app">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="370" parent="291" name="name">
+    <column id="377" parent="292" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="371" parent="291" name="applied">
+    <column id="378" parent="292" name="applied">
       <Position>4</Position>
       <DataType>datetime(6)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="372" parent="291" name="PRIMARY">
+    <key id="379" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="373" parent="292" name="session_key">
+    <column id="380" parent="293" name="session_key">
       <Position>1</Position>
       <DataType>varchar(40)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="374" parent="292" name="session_data">
+    <column id="381" parent="293" name="session_data">
       <Position>2</Position>
       <DataType>longtext|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="375" parent="292" name="expire_date">
+    <column id="382" parent="293" name="expire_date">
       <Position>3</Position>
       <DataType>datetime(6)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="376" parent="292" name="django_session_expire_date_a5c62663">
+    <index id="383" parent="293" name="django_session_expire_date_a5c62663">
       <ColNames>expire_date</ColNames>
     </index>
-    <key id="377" parent="292" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>session_key</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="378" parent="293" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="379" parent="293" name="cname">
-      <Position>2</Position>
-      <DataType>varchar(20)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="380" parent="293" name="cdate">
-      <Position>3</Position>
-      <DataType>date|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="381" parent="293" name="cgirl_num">
-      <Position>4</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="382" parent="293" name="cboy_num">
-      <Position>5</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="383" parent="293" name="is_delete">
-      <Position>6</Position>
-      <DataType>tinyint(1)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
     <key id="384" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>session_key</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="385" parent="294" name="id">
@@ -1709,7 +1709,7 @@ model</ColNames>
     <foreign-key id="394" parent="294" name="myApp_students_sclass_id_d76eb5cd_fk_myApp_class_id">
       <ColNames>sclass_id</ColNames>
       <RefSchemaName>first_django</RefSchemaName>
-      <RefTableName>myapp_class</RefTableName>
+      <RefTableName>class</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
   </database-model>
