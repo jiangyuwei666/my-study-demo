@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from .models import Class, Students
 from django.db.models import *
 
+
 def index(request):
     return HttpResponse('jyw666')
 
@@ -51,3 +52,47 @@ def student_search(request):
 def class_search(request):
     class_list = Class.objects.filter(cdate__month=2)
     return render(request, 'myApp/class.html', {'classes': class_list})
+
+
+def attr(request):
+    print('path', request.path)
+    print('method', request.method)
+    print('encoding', request.encoding)
+    print('GET', request.GET)
+    print('POST', request.POST)
+    print('FILES', request.FILES)
+    print('COOKIES', request.COOKIES)
+    print('session', request.session)
+
+    return HttpResponse('asd')
+
+
+def get1(request):
+    a = request.GET.get('a')
+    b = request.GET.get('b')
+    c = request.GET.get('c')
+    return HttpResponse(a + ' ' + b + ' ' + c)
+
+
+def get2(request):
+    a = request.GET.getlist('a')
+    c = request.GET.get('c')
+    print(a)
+    return HttpResponse(' '.join(a) + ' ' + c)
+
+
+def register(request):
+    name = request.POST.get('name')
+    gender = request.POST.get('gender')
+    age = request.POST.get('age')
+    if 1 == int(gender):
+        gender = '男'
+    else:
+        gender = '女'
+    hobby = request.POST.getlist('hobby')
+    print(request.POST)
+    return HttpResponse('姓名:' + name + '\n' + '性别:' + gender + '\n' + '年龄:' + age + '\n' + '爱好:' + ','.join(hobby))
+
+
+def showregister(request):
+    return render(request, 'myApp/register.html')
