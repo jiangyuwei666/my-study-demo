@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from .models import Class, Students
 from django.db.models import *
 
@@ -82,6 +83,9 @@ def get2(request):
 
 
 def register(request):
+    """
+    获取表单并显示
+    """
     name = request.POST.get('name')
     gender = request.POST.get('gender')
     age = request.POST.get('age')
@@ -90,9 +94,64 @@ def register(request):
     else:
         gender = '女'
     hobby = request.POST.getlist('hobby')
-    print(request.POST)
-    return HttpResponse('姓名:' + name + '\n' + '性别:' + gender + '\n' + '年龄:' + age + '\n' + '爱好:' + ','.join(hobby))
+    response = HttpResponse('姓名:' + name + '\n' + '性别:' + gender + '\n' + '年龄:' + age + '\n' + '爱好:' + ','.join(hobby))
+    print(response.status_code)
+    print(response.content)
+    print(response.charset)
+    return response
 
 
 def showregister(request):
+    """
+    显示注册界面
+    """
     return render(request, 'myApp/register.html')
+
+
+def redirect1(request):
+    return redirect('/redirect2')
+
+
+def redirect2(request):
+    return HttpResponse('重定向')
+
+
+# session+重定向
+def main(request):
+    # 取出session
+    username = request.session.get('username')
+    if username:
+        pass
+    else:
+        username = '未登录，请先登录'
+    return render(request, 'myApp/main.html', {'username': username})
+
+
+def login(request):
+    return render(request, 'myApp/login.html')
+
+
+def showmain(request):
+    username = request.POST.get('username')
+    print(username)
+    # 储存session
+    request.session['username'] = username
+    # request.session.set_expiry(10)# 10秒后过期
+    # request.session.set_expiry()# 10秒后过期
+    return redirect('/main')
+
+
+from django.contrib.auth import logout
+
+
+def qt(request):
+    # 清楚session
+    logout(request)
+    # request.session.clear()
+    # request.session.flush()
+    return redirect('/main')
+
+
+def test(request):
+
+    return render(request, 'myApp/test.html', {'test_list': [11, 'asd']})

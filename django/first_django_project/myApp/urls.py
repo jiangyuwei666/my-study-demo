@@ -14,5 +14,12 @@ urlpatterns = [
     url(r'^get1/$', views.get1),
     url(r'^get2/$', views.get2),
     url(r'^register/$', views.register),
-    url(r'^showregister/$', views.showregister)
+    url(r'^showregister/$', views.showregister),
+    url(r'^redirect1/$', views.redirect1),
+    url(r'^redirect2/$', views.redirect2),
+    url(r'^main/$', views.main),
+    url(r'^showmain/$', views.showmain),
+    url(r'^login/$', views.login),
+    url(r'^logout/$', views.qt),
+    url(r'^test/$', views.test)
 ]
