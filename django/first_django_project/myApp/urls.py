@@ -3,9 +3,9 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.index),  # 用正则匹配
+    url(r'^$', views.index, name='index'),  # 用正则匹配
     url(r'^class/$', views.classes),
-    url(r'^student/$', views.students),
+    url(r'^student/$', views.students, name='xioshengwaer'),
     url(r'^class/(\d+)$', views.class_students),
     url(r'^student/(\d+)$', views.student_info),
     url(r'^studentsearch/$', views.student_search),
@@ -21,5 +21,8 @@ urlpatterns = [
     url(r'^showmain/$', views.showmain),
     url(r'^login/$', views.login),
     url(r'^logout/$', views.qt),
-    url(r'^test/$', views.test)
+    url(r'^test/$', views.test, name='shazidongxi'),
+    url(r'^firstpage/$', views.firstpage),
+    url(r'^upfile/$', views.upfile),
+    url(r'^savefile/$', views.savefile, name='savefile')
 ]

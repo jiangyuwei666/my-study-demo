@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #header{
+            width: 100%;
+            height: 100px;
+            background-color: aqua;
+        }
+        #floor{
+            width: 100%;
+            height: 100px;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+<div id="header">header</div>
+<div id="main">
+    {% block main %}
+    {% endblock main %}
+</div>
+<div id="floor">floor</div>
+
+</body>
+</html>

@@ -153,5 +153,28 @@ def qt(request):
 
 
 def test(request):
-
     return render(request, 'myApp/test.html', {'test_list': [11, 'asd']})
+
+
+def firstpage(request):
+    return render(request, 'myApp/firstpage.html')
+
+
+def upfile(request):
+    return render(request, 'myApp/upfile.html')
+
+
+TEST_PATH = '.'
+import os
+
+
+def savefile(request):
+    if request.method == "POST":
+        f = request.FILES.get('file')
+        path = os.path.join(TEST_PATH, f.name)
+        with open(path, 'wb') as fp:
+            for per in f.chunks():
+                fp.write(per)
+        return HttpResponse('上传成功')
+    else:
+        return HttpResponse('fuck wrong')

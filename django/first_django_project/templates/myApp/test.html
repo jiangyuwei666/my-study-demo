@@ -10,5 +10,8 @@
     {% endifequal %}
 
     <h1>{{ test_list|join:'@' }}</h1>
+    <h1>{{ test1|default:'没有' }}</h1>
+
+    <a href="{% url 'app:xioshengwaer' %}">链接</a>
 </body>
 </html>
