@@ -1,14 +1,16 @@
-from sort.SortTestHelper import Helper
+from sort.SortTestHelper import *
 
 
 class BaseSort:
-    def __init__(self, n, swap_times=None):
+    def __init__(self, n, swap_times=None, repeat=False):
         """
         :param n:
         :param swap_times: 有swap_times表示要生成几乎有序得数列
         """
         if swap_times:
             self.num_list = Helper.get_nearly_list(n, swap_times)
+        elif repeat:
+            self.num_list = Helper.get_repeat_list(n)
         else:
             self.num_list = Helper.get_int_list(n)
 
@@ -142,14 +144,31 @@ class MergeSort(BaseSort):
         """
         递归使用归并排序
         """
-        if left >= right:
-            return
+        # if left >= right:
+        #     return
+
         # 这里不能用len(num_list),边界会出错，比如len为10，算出来mid=5此时mid靠后一位，而通过索引计算0+9算出mid=4
+
+        # 优化二：对于小数组可以使用插入排序或者选择排序，避免递归调用
+        if right - left < 2:
+            for i in range(left + 1, right + 1):
+                temp = num_list[i]
+                index = 0
+                # 注意这里left的边界
+                for j in range(i, left - 1, -1):
+                    if num_list[j] < temp:
+                        num_list[j] = num_list[j - 1]
+                    else:
+                        index = j
+                        break
+                num_list[index] = temp
+            return
+
         mid = (left + right) // 2
         self.__merge_sort(num_list, left, mid)
         self.__merge_sort(num_list, mid + 1, right)
         # self.__merge(num_list, left, mid, right) # 优化之前
-        # 优化一：
+        # 优化一：只对前面比后面大得进行排序
         if num_list[mid] > num_list[mid + 1]:
             self.__merge(num_list, left, mid, right)
 
@@ -183,3 +202,178 @@ class MergeSort(BaseSort):
     @property
     def name(self):
         return '归并排序'
+
+
+class MergeSortUp(BaseSort):
+    """
+    自底向上的归并
+    适用于对链表进行排序
+    """
+    pass
+
+
+class QuickSort(BaseSort):
+    """
+    快排
+    快拍不适合近乎有序的
+    快速排序不适合大量重复的
+    """
+
+    @property
+    def sort(self):
+        self.before_sort()
+        self.__quick_sort(self.num_list, 0, self.num_len - 1)
+        return self.num_list
+
+    def __quick_sort(self, num_list, l, r):
+        # 优化一：还是可以减少递归层数，在最后面的时候改为插入排序或者选择排序
+        if r - l < 10:
+            for i in range(l + 1, r + 1):
+                temp = num_list[i]
+                index = 0
+                # 注意这里left的边界
+                for j in range(i, l - 1, -1):
+                    if num_list[j] < temp:
+                        num_list[j] = num_list[j - 1]
+                    else:
+                        index = j
+                        break
+                num_list[index] = temp
+            return
+        p = self.__partition(num_list, l, r)
+        self.__quick_sort(num_list, l, p - 1)
+        self.__quick_sort(num_list, p + 1, r)
+
+    def __partition(self, num_list, l, r):
+        # 优化二：因为快拍不适合几乎有序，所以我们可以随机选择一个数出来，并且将它放在第一个位置
+        s = random.randint(l, r)
+        num_list[s], num_list[l] = num_list[l], num_list[s]
+        v = num_list[l]
+        j = l
+        for i in range(l + 1, r + 1):
+            if num_list[i] < v:
+                # 与当前j的下一位进行交换
+                num_list[i], num_list[j + 1] = num_list[j + 1], num_list[i]
+                j += 1
+        num_list[l], num_list[j] = num_list[j], num_list[l]
+        return j
+
+    @property
+    def name(self):
+        return "快速排序"
+
+
+class QuickSort2(BaseSort):
+    """
+    快排针对于大量重复元素的优化
+    """
+
+    @property
+    def sort(self):
+        self.before_sort()
+        self.__quick_sort(self.num_list, 0, self.num_len - 1)
+        return self.num_list
+
+    def __quick_sort(self, num_list, l, r):
+        # 优化一：还是可以减少递归层数，在最后面的时候改为插入排序或者选择排序
+        if r - l < 10:
+            for i in range(l + 1, r + 1):
+                temp = num_list[i]
+                index = 0
+                # 注意这里left的边界
+                for j in range(i, l - 1, -1):
+                    if num_list[j] < temp:
+                        num_list[j] = num_list[j - 1]
+                    else:
+                        index = j
+                        break
+                num_list[index] = temp
+            return
+        p = self.__partition(num_list, l, r)
+        self.__quick_sort(num_list, l, p - 1)
+        self.__quick_sort(num_list, p + 1, r)
+
+    def __partition(self, num_list, l, r):
+        # 优化二：因为快拍不适合几乎有序，所以我们可以随机选择一个数出来，并且将它放在第一个位置
+        # 优化三: 大量重复的优化是采用从两头往中间进行烧火棍的方式，这样可以跳过重复元素
+        s = random.randint(l, r - 1)
+        num_list[s], num_list[l] = num_list[l], num_list[s]
+        v = num_list[l]
+        j = r
+        i = l + 1
+        while True:
+            while i <= r and num_list[i] < v:
+                i += 1
+            while j >= l + 1 and num_list[j] > v:
+                j -= 1
+            if j < i:
+                break
+            num_list[i], num_list[j] = num_list[j], num_list[i]
+            j -= 1
+            i += 1
+        num_list[l], num_list[j] = num_list[j], num_list[l]
+        return j
+
+    @property
+    def name(self):
+        return "快速排序2"
+
+
+class QuickSort3(BaseSort):
+    """
+    三路快拍
+    三路快拍适用于有大量重复元素的数列
+    原理：把一个数列分成三部分 大于v 等于v 小于v 这样每次递归只对大于和小于v的部分进行排序，节省了时间
+    """
+
+    @property
+    def sort(self):
+        self.before_sort()
+        self.__quick_sort(self.num_list, 0, self.num_len - 1)
+        return self.num_list
+
+    def __quick_sort(self, num_list, l, r):
+        # 优化一：还是可以减少递归层数，在最后面的时候改为插入排序或者选择排序
+        if r - l < 10:
+            for i in range(l + 1, r + 1):
+                temp = num_list[i]
+                index = 0
+                # 注意这里left的边界
+                for j in range(i, l - 1, -1):
+                    if num_list[j] < temp:
+                        num_list[j] = num_list[j - 1]
+                    else:
+                        index = j
+                        break
+                num_list[index] = temp
+            return
+        s = random.randint(l, r - 1)
+        num_list[s], num_list[l] = num_list[l], num_list[s]
+        v = num_list[l]
+        lt = l
+        gt = r + 1
+        i = l + 1
+        while i < gt:
+            if num_list[i] < v:
+                num_list[i], num_list[lt + 1] = num_list[lt + 1], num_list[i]
+                lt += 1  # 此时lt指向 等于v那一部分的第一个
+                i += 1
+            elif num_list[i] > v:
+                num_list[i], num_list[gt - 1] = num_list[gt - 1], num_list[i]
+                gt -= 1
+            else:
+                i += 1
+        num_list[l], num_list[lt] = num_list[lt], num_list[l]
+        self.__quick_sort(num_list, l, lt - 1)
+        self.__quick_sort(num_list, gt, r)
+
+    @property
+    def name(self):
+        return "快速排序3"
+
+
+class HeapSort(BaseSort):
+    """
+    堆排序
+    """
+    pass

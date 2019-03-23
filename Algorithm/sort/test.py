@@ -15,6 +15,10 @@ class Tester:
                 s = item(n, swap_times=swap_times)
                 if isinstance(s, BaseSort):
                     self.sorters.append(s)
+            elif method == 'repeat' and callable(item):
+                s = item(n, repeat=True)
+                if isinstance(s, BaseSort):
+                    self.sorters.append(s)
 
     def test_sort(self):
         time_list = []
@@ -22,10 +26,10 @@ class Tester:
             start_time = time.time()
             print(sorter.name, sorter.sort)
             end_time = time.time()
-            time_list.append(sorter.name + str(end_time - start_time))
+            time_list.append(sorter.name + ':' + str(end_time - start_time))
         print(time_list)
 
 
-tester = Tester(n=10000, sorter_list=[InsertSort, MergeSort], method='nearly', swap_times=1)
-# tester = Tester(n=10, sorter_list=[MergeSort])
+# tester = Tester(n=10000, sorter_list=[InsertSort, MergeSort], method='nearly', swap_times=1)
+tester = Tester(n=1000, sorter_list=[QuickSort3, QuickSort])
 tester.test_sort()

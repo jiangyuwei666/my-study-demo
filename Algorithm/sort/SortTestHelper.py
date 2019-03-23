@@ -21,3 +21,8 @@ class Helper:
             b = random.randint(0, n - 1)
             num_list[a], num_list[b] = num_list[b], num_list[a]
         return num_list
+
+    @classmethod
+    def get_repeat_list(cls, n):
+        return list(np.random.randint(low=0, high=10, size=n))
+
