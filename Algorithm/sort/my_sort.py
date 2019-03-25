@@ -374,6 +374,47 @@ class QuickSort3(BaseSort):
 
 class HeapSort(BaseSort):
     """
-    堆排序
+    原地堆排序
+    先将数组变成一个最大堆，将最大元素放在堆的最后，再使剩下的变成最大堆
+    左子节点：2 * i + 1
+    右子节点：2 * i + 2
+    父节点：（i - 1）//2
+    最后一个非叶子节点的索引：（count - 1）//2
     """
-    pass
+
+    @property
+    def sort(self):
+        self.before_sort()
+        # 找所有非叶子节点
+        # 将数组构建成一个堆
+        for i in range((self.num_len - 1) // 2, -1, -1):
+            # 因为每个叶子节点可以看作是一个最大堆，所以网上走，将每个非叶子节点何其子节点也变成最大堆，就是用shift_down操作，将子树的根节点与其子节点进行交换
+            self.__shift_down(self.num_list, self.num_len, i)
+        for j in range(self.num_len - 1, 0, -1):
+            # 交换最后一个和根节点
+            self.num_list[0], self.num_list[j] = self.num_list[j], self.num_list[0]
+            # 将顶部不是最大的那个值往下调，一直要调到当前不是最大的j那个位置
+            self.__shift_down(self.num_list, j, 0)
+        return self.num_list
+
+    def __shift_down(self, num_list, num_len, k):
+        """
+
+        :param num_list: 操作的数组
+        :param num_len: 总共要操作多少个
+        :param k: 需要交换的索引
+        :return:
+        """
+        while 2 * k + 1 < num_len:
+            j = 2 * k + 1
+            # 如果存在右子节点并且右子节点比左子节点大
+            if j + 1 < num_len and num_list[j + 1] > num_list[j]:
+                j += 1
+            if num_list[k] > num_list[j]:
+                break
+            num_list[k], num_list[j] = num_list[j], num_list[k]
+            k = j
+
+    @property
+    def name(self):
+        return "堆排序"

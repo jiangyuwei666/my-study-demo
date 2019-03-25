@@ -31,5 +31,5 @@ class Tester:
 
 
 # tester = Tester(n=10000, sorter_list=[InsertSort, MergeSort], method='nearly', swap_times=1)
-tester = Tester(n=1000, sorter_list=[QuickSort3, QuickSort])
+tester = Tester(n=10, sorter_list=[HeapSort])
 tester.test_sort()
