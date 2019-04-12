@@ -22,13 +22,21 @@ def search_min(arr):
         if r - l == 1:
             return arr[r]
         mid = (l + r) // 2
+        if arr[l] == arr[mid] == arr[r]:
+            return min(arr)
         if arr[r] >= arr[mid]:
             r = mid
         if arr[l] <= arr[mid]:
             l = mid
+
     return arr[0]
 
 
 print(search_min([3, 4, 5, 1, 2]))
 print(search_min([1, 0, 0, 1]))
-print(search_min([0, 0, 1, 0]))
+print(search_min([0, 0, 0, 1, 0]))
+print(search_min([1, 0, 1, 1, 1]))
+print(search_min([1, 2, 3, 4, 5]))
+# print(search_min([]))
+print(search_min([1]))
+print(search_min([1, 1, 2, 3, 4, 5]))
