@@ -16,7 +16,25 @@ def my_decorator(is_time=True):
     return inner1
 
 
-@my_decorator(is_time=False)
+class MyDecorator:
+
+    def __init__(self, is_time=True):
+        self.is_time = is_time
+
+    def __call__(self, func):
+        def _log(*args):
+            t1 = time.time()
+            m = func(*args)
+            t2 = time.time()
+            if self.is_time:
+                print("用时: {} s".format(t2 - t1))
+            return m
+
+        return _log
+
+
+# @my_decorator(is_time=False)
+@MyDecorator(False)
 def my_test(a, b):
     """
     假装这是个算法
