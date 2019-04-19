@@ -46,37 +46,9 @@ class Tree:
                 queue.append(node.right)
         return result
 
-    def print_tree(self):
-        """
-        先序遍历，如果是一样的就说明生成成功了
-        """
-        result = []
+    def print_z(self):
+        ret = []
+        flag = 1
+        if not self.root:
+            return ret
 
-        def _print(head):
-            if not head:
-                return None
-            result.append(head.x)
-            _print(head.left)
-            _print(head.right)
-
-        _print(self.root)
-        return result
-
-
-def sub_tree(tree1, tree2):
-    if tree1 and tree2:
-        if tree1.x == tree2.x:
-            return sub_tree(tree1.left, tree2.left) and sub_tree(tree1.right, tree2.right)
-        else:
-            return sub_tree(tree1.left, tree2) or sub_tree(tree1.right, tree2)
-    if not tree1 and tree2:
-        return False
-    return True
-
-t1 = Tree()
-t1.construct_tree([1, 2, 3, None, 4, 5])
-print(t1.bfs())
-t2 = Tree()
-t2.construct_tree([2, None, 4])
-print(t2.bfs())
-print(sub_tree(t1.root, t2.root))

@@ -46,37 +46,28 @@ class Tree:
                 queue.append(node.right)
         return result
 
-    def print_tree(self):
-        """
-        先序遍历，如果是一样的就说明生成成功了
-        """
-        result = []
+    def depth(self):
 
-        def _print(head):
-            if not head:
-                return None
-            result.append(head.x)
-            _print(head.left)
-            _print(head.right)
+        def __depth(root):
+            if not root:
+                return 0
+            left = __depth(root.left)
+            right = __depth(root.right)
 
-        _print(self.root)
-        return result
+            return left + 1 if left >= right else right + 1
 
+        return __depth(self.root)
 
-def sub_tree(tree1, tree2):
-    if tree1 and tree2:
-        if tree1.x == tree2.x:
-            return sub_tree(tree1.left, tree2.left) and sub_tree(tree1.right, tree2.right)
-        else:
-            return sub_tree(tree1.left, tree2) or sub_tree(tree1.right, tree2)
-    if not tree1 and tree2:
-        return False
-    return True
 
 t1 = Tree()
-t1.construct_tree([1, 2, 3, None, 4, 5])
+t1.construct_tree([1, 2, 3, 4, 5, 6, 7, 8])
 print(t1.bfs())
-t2 = Tree()
-t2.construct_tree([2, None, 4])
-print(t2.bfs())
-print(sub_tree(t1.root, t2.root))
+print(t1.depth())
+t1 = Tree()
+t1.construct_tree([])
+print(t1.bfs())
+print(t1.depth())
+t1 = Tree()
+t1.construct_tree([1])
+print(t1.bfs())
+print(t1.depth())
