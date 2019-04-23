@@ -129,6 +129,46 @@ class ShellSort(BaseSort):
         return '选择排序'
 
 
+class MergeSort1(BaseSort):
+    @property
+    def sort(self):
+        self.before_sort()
+        self.__merge_sort(self.num_list, 0, self.num_len - 1)
+        return self.num_list
+
+    def __merge_sort(self, num_list, left, right):
+        if left >= right:
+            return
+
+        mid = (left + right) // 2
+        self.__merge_sort(self.num_list, left, mid)
+        self.__merge_sort(self.num_list, mid + 1, right)
+
+        self.__merge(self.num_list, left, mid, right)
+
+    def __merge(self, num_list, left, mid, right):
+        ret = []
+        for i in num_list:
+            ret.append(i)
+
+        i = left
+        j = mid + 1
+
+        for m in range(left, right + 1):
+            if i > mid:
+                num_list[m] = ret[j]
+                j += 1
+            elif j > right:
+                num_list[m] = ret[i]
+                i += 1
+            elif ret[i] < ret[j]:
+                num_list[m] = ret[i]
+                i += 1
+            else:
+                num_list[m] = ret[j]
+                j += 1
+
+
 class MergeSort(BaseSort):
     """
     归并排序
@@ -261,6 +301,32 @@ class QuickSort(BaseSort):
     @property
     def name(self):
         return "快速排序"
+
+
+class QuickSortjj(BaseSort):
+    @property
+    def sort(self):
+        self.before_sort()
+        self.quick_sort(self.num_list, 0, self.num_len - 1)
+        return self.num_list
+
+    def quick_sort(self, num_list, left, right):
+        if left >= right:
+            return
+
+        k = self.__partition(num_list, left, right)
+        self.quick_sort(num_list, left, k)
+        self.quick_sort(num_list, k + 1, right)
+
+    def __partition(self, num_list, left, right):
+        p = num_list[left]
+        j = left
+        for i in range(left + 1, right + 1):
+            if num_list[i] < p:
+                num_list[j + 1], num_list[i] = num_list[i], num_list[j + 1]
+                j += 1
+        num_list[left], num_list[j] = num_list[j], num_list[left]
+        return j
 
 
 class QuickSort2(BaseSort):
