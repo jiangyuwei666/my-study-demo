@@ -1,13 +1,57 @@
-def get_input():
-    s = input()
-    s = s.split(' ')
-    x, y = int(s[0]), int(s[1])
-    ret = []
-    for i in range(x):
-        m = input()
-        m = m.split(' ')
-        for j in range(len(m)):
-            m[j] = int(m[j])
-        ret.append(m)
-    print(ret)
-get_input()
+def string2int(str):
+    dict = {
+        '0': 0,
+        '1': 1,
+        '2': 2,
+        '3': 3,
+        '4': 4,
+        '5': 5,
+        '6': 6,
+        '7': 7,
+        '8': 8,
+        '9': 9,
+        '.': 1,
+        '-': -1,
+    }
+
+    str = list(str)
+    if not str or len(str) < 0:
+        return 0
+    while str[0] == '0':
+        if len(str) > 1:
+            str = str[1:]
+        else:
+            return 0
+    flag = 1
+    if str[0] == '-':
+        flag = -1
+        str = str[1:]
+    ret = 0
+    stack = []
+    for i in range(len(str)):
+        if str[i] not in dict.keys():
+            return 0
+        elif str[i] == '.':
+            break
+        else:
+            stack.append(int(str[i]))
+    n = 1
+    while stack:
+        ret += stack.pop(-1) * n
+        n *= 10
+    return ret * flag
+
+
+
+
+
+
+
+try:
+    _str = input()
+except:
+    _str = None
+
+res = string2int(_str)
+
+print(str(res) + "\n")
