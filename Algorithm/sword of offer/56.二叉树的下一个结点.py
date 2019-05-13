@@ -78,6 +78,7 @@ class Tree:
                     n = n.pre
                 return n.pre
 
+
 tree = Tree(node_list=[1, 2, 3, 4, 5])
 node_list = tree.get_nodes()
 print(tree.find_next(node_list[0]).val)
